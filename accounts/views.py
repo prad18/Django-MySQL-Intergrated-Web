@@ -42,11 +42,11 @@ def register(request):
             else:   
                 user = User.objects.create_user(username=username, password=password1, email=email,first_name=first_name,last_name=last_name)
                 user.save();
-                print('user created')
+                print('User Created!!!')
                 return redirect('login')
 
         else:
-            messages.info(request,'password not matching..')    
+            messages.info(request,'Password not matching..')    
             return redirect('register')
         
         
