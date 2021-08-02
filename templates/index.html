@@ -38,18 +38,20 @@
 										<li><a href="contact.html">Contact</a></li>
 
 										{% if user.is_authenticated %}
-										<li>Hello, {{user.first_name}}</li>
 										<li><a href="profile">Profile</a></li>
 										<li><a href="accounts/logout">Logout</a></li>
-										{% else %}	
+									</ul>
+								</nav>
+								<div class="header_phone ml-auto">Hello, {{user.first_name}}</div>
+										{% else %}
+								<nav class="main_nav">
+										<ul class="d-flex flex-row align-items-start justify-content-start">	
 										<li><a href="accounts/register">Register</a></li>
 										<li><a href="accounts/login">Login</a></li>
-
 										{% endif %}										
 									</ul>
 								</nav>
-								<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
-
+								
 								<!-- Hamburger -->
 
 								<div class="hamburger ml-auto">
