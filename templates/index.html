@@ -17,9 +17,12 @@
 	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
 	<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css' %}">
 	<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css' %}">
+
+
 </head>
 
 <body>
+	
 
 	<div class="super_container">
 
@@ -36,7 +39,6 @@
 									<ul class="d-flex flex-row align-items-start justify-content-start">
 										<li class="active"><a href="/">Home</a></li>
 										<li><a href="contact.html">Contact</a></li>
-
 										{% if user.is_authenticated %}
 										<li><a href="profile">Profile</a></li>
 										<li><a href="accounts/logout">Logout</a></li>
@@ -309,7 +311,7 @@
 									{% endif %}
 								</div>
 								<div class="destination_content">
-									<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
+									<div class="destination_title"><a href="{{dest.link}}">{{dest.name}}</a></div>
 									<div class="destination_subtitle">
 										<p>{{dest.dec}}</p>
 									</div>
@@ -337,74 +339,6 @@
 		</div>
 	</div>
 		{% endif %}
-		<!-- Testimonials -->
-
-		<div class="testimonials" id="testimonials">
-			<div class="parallax_background parallax-window" data-parallax="scroll"
-				data-image-src="{% static 'images/testimonials.jpg' %}" data-speed="0.8"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<div class="section_subtitle">simply amazing places</div>
-						<div class="section_title">
-							<h2>Testimonials</h2>
-						</div>
-					</div>
-				</div>
-				<div class="row testimonials_row">
-					<div class="col">
-
-						<!-- Testimonials Slider -->
-						<div class="testimonials_slider_container">
-							<div class="owl-carousel owl-theme testimonials_slider">
-
-								<!-- Slide -->
-								<div class="owl-item text-center">
-									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula
-										odio.</div>
-									<div class="testimonial_author">
-										<div
-											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-											<div>john turner,</div>
-											<div>client</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Slide -->
-								<div class="owl-item text-center">
-									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula
-										odio.</div>
-									<div class="testimonial_author">
-										<div
-											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-											<div>john turner,</div>
-											<div>client</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Slide -->
-								<div class="owl-item text-center">
-									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula
-										odio.</div>
-									<div class="testimonial_author">
-										<div
-											class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-											<div>john turner,</div>
-											<div>client</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="test_nav">
 				<ul class="d-flex flex-column align-items-end justify-content-end">
 					<li><a href="#">City Breaks Clients<span>01</span></a></li>
@@ -516,76 +450,10 @@
 			</div>
 		</div>
 
-		<!-- Footer -->
-
-		<footer class="footer">
-			<div class="parallax_background parallax-window" data-parallax="scroll"
-				data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						
-					</div>
-				</div>
-				<div class="row footer_contact_row">
-					<div class="col-xl-10 offset-xl-1">
-						<div class="row">
-
-							<!-- Footer Contact Item -->
-							<div class="col-xl-4 footer_contact_col">
-								<div
-									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-									<div class="footer_contact_icon"><img src="{% static 'images/sign.svg' %}" alt="">
-									</div>
-									<div class="footer_contact_title">give us a call</div>
-									<div class="footer_contact_list">
-										<ul>
-											<li>Office Landline: +44 5567 32 664 567</li>
-											<li>Mobile: +44 5567 89 3322 332</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<!-- Footer Contact Item -->
-							<div class="col-xl-4 footer_contact_col">
-								<div
-									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-									<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}"
-											alt=""></div>
-									<div class="footer_contact_title">come & drop by</div>
-									<div class="footer_contact_list">
-										<ul style="max-width:190px">
-											<li>4124 Barnes Street, Sanford, FL 32771</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-							<!-- Footer Contact Item -->
-							<div class="col-xl-4 footer_contact_col">
-								<div
-									class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-									<div class="footer_contact_icon"><img src="{% static 'images/around.svg' %}" alt="">
-									</div>
-									<div class="footer_contact_title">send us a message</div>
-									<div class="footer_contact_list">
-										<ul>
-											<li>youremail@gmail.com</li>
-											<li>Office@yourbusinessname.com</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="col text-center">
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;
-				<script>document.write(new Date().getFullYear());</script>Made With 🖤 By Prad
+				
+				Made With 🖤 By Prad
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			</div>
 		</footer>

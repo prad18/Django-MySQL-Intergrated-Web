@@ -9,4 +9,13 @@ class Destination(models.Model):
     dec   = models.TextField()
     img   = models.ImageField(upload_to='pics')
     offer = models.BooleanField(default=False)
-   
+    link  = models.CharField(max_length=100)
+
+
+class ChennaiRestaurant(models.Model):
+    name  = models.CharField(max_length=100)
+    price = models.IntegerField()
+    dec   = models.TextField()
+    img   = models.ImageField(upload_to='pics')
+    offer = models.BooleanField(default=False)
+    link  = models.CharField(max_length=100)
