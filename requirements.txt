@@ -1,2 +1,2 @@
 django
-mysqlconnector
+mysql-connector-python
